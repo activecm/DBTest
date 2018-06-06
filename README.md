@@ -1,4 +1,4 @@
-# DBTest: Go Integration Testing Via Docker
+# DBTest: Managed Integration Testing Dependencies via Docker for Go
 
 ### DBTest Allows You to Test Against a Real Database
 

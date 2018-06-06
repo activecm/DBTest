@@ -38,3 +38,9 @@ service, err := loader.StartService(context.Background(), &helloWorldSpec)
 //no StopService call since "hello-world" exits on its own
 _ = err
 ```
+
+## Docker API Version
+The Go Docker API is notoriously hard to vendor due to the Moby rename.
+
+This API is based off of commit `21291e5aefe1f13f3208d57bcc4183848c492bd1`
+on Moby/Moby which was committed to master on June 6th, 2018.

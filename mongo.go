@@ -29,19 +29,20 @@ func NewMongoDBContainer(ctx context.Context, loader docker.Loader) (MongoDBCont
 		return mongoOut, err
 	}
 
-	err = WaitForTCP(ctx, mongoOut.getMongoDBAddress())
+	err = WaitForTCP(ctx, mongoOut.getSocketAddress())
 	return mongoOut, err
 }
 
 //NewSession returns a new mgo.Session object dialed into to this server
 func (m MongoDBContainer) NewSession() (*mgo.Session, error) {
-	return mgo.Dial(m.getMongoDBURI())
+	return mgo.Dial(m.GetMongoDBURI())
 }
 
-func (m MongoDBContainer) getMongoDBURI() string {
-	return "mongodb://" + m.GetIPAddress()
+//GetMongoDBURI returns the MongoDB URI for connecting to the container
+func (m MongoDBContainer) GetMongoDBURI() string {
+	return "mongodb://" + m.getSocketAddress()
 }
 
-func (m MongoDBContainer) getMongoDBAddress() string {
+func (m MongoDBContainer) getSocketAddress() string {
 	return m.GetIPAddress() + ":27017"
 }

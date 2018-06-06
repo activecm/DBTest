@@ -23,3 +23,18 @@ err = ssn.Ping()
 err = l.StopService(context.Background(), mongo)
 _ = err
 ```
+
+## Arbitrary Ephemeral Docker Containers
+```go
+//Create a new Loader. This may error is Docker is not accessible
+loader, err := docker.NewLoader()
+helloWorldSpec := docker.ServiceSpecification{
+  FullyQualifiedImageName: "library/hello-world",
+  ContainerConfig: &container.Config{
+    Image: "hello-world",
+  },
+}
+service, err := loader.StartService(context.Background(), &helloWorldSpec)
+//no StopService call since "hello-world" exits on its own
+_ = err
+```

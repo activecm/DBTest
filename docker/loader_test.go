@@ -21,12 +21,11 @@ func TestNewLoader(t *testing.T) {
 func TestStartHelloWorld(t *testing.T) {
 	loader, err := NewLoader()
 	require.Nil(t, err)
-	helloWorldContainerSpec := container.Config{
-		Image: "hello-world",
-	}
 	helloWorldSpec := ServiceSpecification{
 		FullyQualifiedImageName: "library/hello-world",
-		ContainerConfig:         &helloWorldContainerSpec,
+		ContainerConfig: &container.Config{
+			Image: "hello-world",
+		},
 	}
 	service, err := loader.StartService(context.Background(), &helloWorldSpec)
 	require.Nil(t, err)
@@ -35,8 +34,9 @@ func TestStartHelloWorld(t *testing.T) {
 }
 
 func TestStartStopService(t *testing.T) {
-	loader, err := NewLoader()
+	cli, err := client.NewEnvClient()
 	require.Nil(t, err)
+	loader := NewLoaderFromClient(cli)
 	mongoContainerSpec := container.Config{Image: "mongo:latest"}
 	mongoSpec := ServiceSpecification{
 		FullyQualifiedImageName: "library/mongo",

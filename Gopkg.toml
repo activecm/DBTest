@@ -10,19 +10,19 @@
   branch = "v2"
   name = "gopkg.in/mgo.v2"
 
-# ADD THESE TO YOUR Gopkg.toml FILE
-[[override]]
+# Compatibility constraints. See depdummy.go
+[[constraint]]
   name = "github.com/docker/distribution"
   revision = "83389a148052d74ac602f5f1d62f86ff2f3c4aa5"
 
-[[override]]
+[[constraint]]
   name = "github.com/docker/go-units"
   revision = "9e638d38cf6977a37a8ea0078f3ee75a7cdb2dd1"
 
-[[override]]
+[[constraint]]
   name = "github.com/docker/go-connections"
   revision = "7beb39f0b969b075d1325fecb092faf27fd357b6"
 
-[[override]]
+[[constraint]]
   name = "github.com/pkg/errors"
   revision = "839d9e913e063e28dfd0e6c7b7512793e0a48be9"

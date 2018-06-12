@@ -1,29 +1,6 @@
-# Gopkg.toml example
-#
-# Refer to https://github.com/golang/dep/blob/master/docs/Gopkg.toml.md
-# for detailed Gopkg.toml documentation.
-#
-# required = ["github.com/user/thing/cmd/thing"]
-# ignored = ["github.com/user/project/pkgX", "bitbucket.org/user/project/pkgA/pkgY"]
-#
-# [[constraint]]
-#   name = "github.com/user/project"
-#   version = "1.0.0"
-#
-# [[constraint]]
-#   name = "github.com/user/project2"
-#   branch = "dev"
-#   source = "github.com/myfork/project2"
-#
-# [[override]]
-#  name = "github.com/x/y"
-#  version = "2.4.0"
-
-
 [[constraint]]
   name = "github.com/docker/docker"
-  #version = "17.05.0-ce"
-  branch = "master"
+  revision = "21291e5aefe1f13f3208d57bcc4183848c492bd1"
 
 [[constraint]]
   name = "github.com/stretchr/testify"
@@ -33,6 +10,7 @@
   branch = "v2"
   name = "gopkg.in/mgo.v2"
 
+# ADD THESE TO YOUR Gopkg.toml FILE
 [[override]]
   name = "github.com/docker/distribution"
   revision = "83389a148052d74ac602f5f1d62f86ff2f3c4aa5"

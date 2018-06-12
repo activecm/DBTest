@@ -22,7 +22,6 @@
   revision = "83389a148052d74ac602f5f1d62f86ff2f3c4aa5"
 
 [[projects]]
-  branch = "master"
   name = "github.com/docker/docker"
   packages = [
     "api",
@@ -97,8 +96,8 @@
     "assert",
     "require"
   ]
-  revision = "12b6f73e6084dad08a7c6e575284b177ecafbc71"
-  version = "v1.2.1"
+  revision = "f35b8ab0b5a2cef36673838d662e249dd9c94686"
+  version = "v1.2.2"
 
 [[projects]]
   branch = "master"
@@ -109,13 +108,13 @@
     "internal/socks",
     "proxy"
   ]
-  revision = "1e491301e022f8f977054da4c2d852decd59571f"
+  revision = "db08ff08e8622530d9ed3a0e8ac279f6d4c02196"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["windows"]
-  revision = "9527bec2660bd847c050fda93a0f0c6dee0800bb"
+  revision = "a9e25c09b96b8870693763211309e213c6ef299d"
 
 [[projects]]
   branch = "v2"
@@ -132,6 +131,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "11331e22c78759aa252b12c24c5ecbbe8a86eecfb27301611587f97ec8cbfb12"
+  inputs-digest = "0cee15687545aacf769354327de5e625a997bcb18f8aa0631f6cee9ed33b2a87"
   solver-name = "gps-cdcl"
   solver-version = 1

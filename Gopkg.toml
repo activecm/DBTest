@@ -25,4 +25,5 @@
 
 [[constraint]]
   name = "github.com/pkg/errors"
-  revision = "839d9e913e063e28dfd0e6c7b7512793e0a48be9"
+#  revision = "839d9e913e063e28dfd0e6c7b7512793e0a48be9"
+  version = "0.8.0"

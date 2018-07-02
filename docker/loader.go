@@ -95,3 +95,8 @@ func (l Loader) StopService(ctx context.Context, service IService) error {
 	}
 	return nil
 }
+
+//Close closes the socket used to contact the Docker API
+func (l Loader) Close() error {
+	return l.client.Close()
+}

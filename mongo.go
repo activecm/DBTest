@@ -5,7 +5,7 @@ import (
 
 	"github.com/activecm/dbtest/docker"
 	"github.com/docker/docker/api/types/container"
-	mgo "gopkg.in/mgo.v2"
+	mgo "github.com/globalsign/mgo"
 )
 
 //MongoDBContainer extends docker.Service to provide
